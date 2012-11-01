@@ -3,3 +3,8 @@ C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Domain\bin\Debug\SurveyS
 C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Domain\bin\Debug\SurveySays.Domain.pdb
 C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Domain\obj\Debug\SurveySays.Domain.dll
 C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Domain\obj\Debug\SurveySays.Domain.pdb
+C:\Users\Jeff\Documents\GitHub\SurveySays\SurveySays.Domain\bin\Debug\SurveySays.Domain.dll
+C:\Users\Jeff\Documents\GitHub\SurveySays\SurveySays.Domain\bin\Debug\SurveySays.Domain.pdb
+C:\Users\Jeff\Documents\GitHub\SurveySays\SurveySays.Domain\obj\Debug\SurveySays.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\GitHub\SurveySays\SurveySays.Domain\obj\Debug\SurveySays.Domain.dll
+C:\Users\Jeff\Documents\GitHub\SurveySays\SurveySays.Domain\obj\Debug\SurveySays.Domain.pdb
