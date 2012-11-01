@@ -53,7 +53,6 @@ namespace SurveySays.Api
 	        {
                 question.SelectChoice(choiceId);
 	        }
-            
         }
 
         public void RecordMemoAnswer(Guid questionId, string memoText)

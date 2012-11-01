@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SurveySays.Domain.Api
+namespace SurveySays.UnitTests
 {
-    public class Configuration
+    public class SurveyTests
     {
     }
 }
