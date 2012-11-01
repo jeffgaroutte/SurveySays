@@ -24,13 +24,11 @@ namespace SurveySays.Models
             choices.Add(choice);
         }
 
-
         internal void SelectChoice(Guid choiceId)
         {
             var choice = choices.Single(x => x.Id == choiceId);
             selectedChoice = choice;
         }
-
 
         internal override string AnswerText
         {
