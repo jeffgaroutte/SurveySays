@@ -8,24 +8,19 @@ namespace SurveySays.Domain.Models
     internal class MultiChoiceQuestion : ChoiceQuestion
     {
 
-        private IList<Choice> choices;
+        
         private IList<Choice> SelectedChoices;
 
         internal MultiChoiceQuestion(string questionText)
             : base(questionText)
         {
-            choices = new List<Choice>();
+            Choices = new List<Choice>();
             SelectedChoices = new List<Choice>();
-        }
-
-        internal void AddChoice(Choice choice)
-        {
-            choices.Add(choice);
         }
 
         internal void SelectChoice(Guid choiceId)
         {
-            var choice = choices.Single(x => x.Id == choiceId);
+            var choice = Choices.Single(x => x.Id == choiceId);
             SelectedChoices.Add(choice);
         }
 
@@ -42,6 +37,11 @@ namespace SurveySays.Domain.Models
         internal override bool HasSelected(Guid choiceId)
         {
             return this.SelectedChoices != null && this.SelectedChoices.Any(c => c.Id.Equals(choiceId));
+        }
+
+        internal override bool IsAnswered()
+        {
+            return this.SelectedChoices != null && this.SelectedChoices.Any();
         }
 
     }

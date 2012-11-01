@@ -29,7 +29,7 @@
 	And the fifth question is "what is your name"
 
 @NextQuestion
-Scenario Outline: Get the next question when has pre-requsites
+Scenario Outline: Outline - Get the next question when has pre-requsites
 	Given I answered the first question with "green"
 	And I answered the second question with <answer to the second question>
 	And the third question has the prequsite that the second question was answered with <answer that sastifies the prerequsite>
@@ -38,7 +38,7 @@ Scenario Outline: Get the next question when has pre-requsites
 
 	Examples: 
 	| description                   | expected question | answer that sastifies the prerequsite | answer to the second question |
-	| when the prequsite is not met | fifth             | "bird"                                | "Mouse"                       |
-	| when the prequsite is met     | forth             | "bird"                                | "bird"                        |
+	| when the prequsite is not met | forth             | "Bird"                                | "Mouse"                       |
+	| when the prequsite is met     | third             | "Bird"                                | "Bird"                        |
 
 

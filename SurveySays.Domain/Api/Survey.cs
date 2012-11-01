@@ -22,9 +22,21 @@ namespace SurveySays.Domain.Api
             MemoQuestions = new Dictionary<Guid, MemoQuestion>();
         }
 
-        public dynamic GetNextQuestion()
+        public QuestionSummary GetNextQuestion()
         {
-            return null;
+            Question question = OrderedQuestions.FirstOrDefault(q => !q.IsAnswered() && q.PreReqisitesHaveAllBeenMet());
+            QuestionSummary summary = null;
+            
+            if(question !=null)
+            {
+                summary = new QuestionSummary()
+                {
+                    Id = question.Id,
+                    QuestionText = question.QuestionText
+                };
+            }
+
+            return summary;
         }
 
         internal void AddQuestion(SingleChoiceQuestion question)

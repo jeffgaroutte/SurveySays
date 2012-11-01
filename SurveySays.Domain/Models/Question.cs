@@ -18,6 +18,11 @@ namespace SurveySays.Domain.Models
             this.preRequsites = new List<IPreRequsite>();
         }
 
+        internal string QuestionText
+        {
+            get { return questionText; }
+        }
+
         internal Guid Id
         {
             get { return id; }
@@ -30,5 +35,12 @@ namespace SurveySays.Domain.Models
 
         internal abstract string AnswerText { get; }
 
+        internal abstract bool IsAnswered();
+
+        internal bool PreReqisitesHaveAllBeenMet()
+        {
+            bool HasUnMetPreReqisites= this.preRequsites.Any(p => !p.IsSatisfied());
+            return !HasUnMetPreReqisites;
+        }
     }
 }

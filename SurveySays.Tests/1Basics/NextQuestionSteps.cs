@@ -5,6 +5,7 @@ using System.Text;
 using TechTalk.SpecFlow;
 using SurveySays.Domain.Api;
 using SurveySays.Domain.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SurveySays.Tests._1Basics
 {
@@ -15,6 +16,9 @@ namespace SurveySays.Tests._1Basics
         [Given(@"I have started taking a survey")]
         public void GivenIHaveStartedTakingASurvey()
         {
+            SurveySays.Domain.Api.Survey survey = new SurveySays.Domain.Api.Survey();
+            ScenarioContext.Current["Survey"] = survey;
+            /*
             var config = new SetupSurvey();
 
             var questionOneId = Guid.NewGuid();
@@ -51,41 +55,68 @@ namespace SurveySays.Tests._1Basics
                             .HavingValueOf("asdf")
                         .EndOfQuestion
                 .Done();
+            */
 
-            
 
         }
 
         [Given(@"I answered the question ""(.*)"" with the answers ""(.*)"" as ""(.*)""")]
-        public void GivenIAnsweredTheQuestionWithTheAnswersAs(string question, string answers, string myAnswer)
+        public void GivenIAnsweredTheQuestionWithTheAnswersAs(string questionText, string answers, string myAnswer)
         {
-            ScenarioContext.Current.Pending();
+            SurveySays.Domain.Api.Survey survey = ScenarioContext.Current["Survey"] as SurveySays.Domain.Api.Survey;
+
+            SingleChoiceQuestion question = new SingleChoiceQuestion(questionText);
+            PopulateAnswers(question, answers);
+            survey.AddQuestion(question);
+            Choice choice = question.Choices.SingleOrDefault(c => c.DisplayText.Equals(myAnswer));
+            survey.RecordSingleAnswer(question.Id, choice.Id);
         }
 
-        [Given(@"the survey has the question ""(.*)"" with the answers ""(.*)""")]
+        [Given(@"the survey has the question ""([^""]*)"" with the answers ""(.*)""")]
         public void GivenTheSurveyHasTheQuestionWithTheAnswers(string questionText, string answers)
         {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"the survey has the open ended question ""(.*)""")]
-        public void GivenTheSurveyHasTheQuestion(string questionText)
-        {
-            ScenarioContext.Current.Pending();
+            SurveySays.Domain.Api.Survey survey = ScenarioContext.Current["Survey"] as SurveySays.Domain.Api.Survey;
+
+            SingleChoiceQuestion question = new SingleChoiceQuestion(questionText);
+            PopulateAnswers(question, answers);
+            survey.AddQuestion(question);
         }
 
+        [Given(@"the survey has the question ""([^""]*)""")]
+        public void GivenTheSurveyHasTheQuestion(string questionText)
+        {
+            SurveySays.Domain.Api.Survey survey = ScenarioContext.Current["Survey"] as SurveySays.Domain.Api.Survey;
+
+            MemoQuestion question = new MemoQuestion(questionText);
+            survey.AddQuestion(question);
+        }
 
         [When(@"I get the next question")]
         public void WhenIGetTheNextQuestion()
         {
-            ScenarioContext.Current.Pending();
+            SurveySays.Domain.Api.Survey survey = ScenarioContext.Current["Survey"] as SurveySays.Domain.Api.Survey;
+
+            QuestionSummary question = null;
+
+            question = survey.GetNextQuestion();
+            ScenarioContext.Current["NextQuestion"] = question;
         }
 
         [Then(@"the question should have the text ""(.*)""")]
         public void ThenTheQuestionShouldHaveTheText(string questionText)
         {
-            ScenarioContext.Current.Pending();
+            QuestionSummary question = ScenarioContext.Current["NextQuestion"] as QuestionSummary;
+            Assert.AreEqual(questionText, question.QuestionText);
         }
 
+        private void PopulateAnswers(ChoiceQuestion question, string answers)
+        {
+            foreach (var answer in answers.Split(','))
+            {
+                string cleanAnswer = answer.Trim();
+                Choice choice = new Choice() { DisplayText = cleanAnswer, Value = cleanAnswer, Id = Guid.NewGuid() };
+                question.AddChoice(choice);
+            }
+        }
     }
 }

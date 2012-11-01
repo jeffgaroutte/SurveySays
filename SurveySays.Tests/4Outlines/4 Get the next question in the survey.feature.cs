@@ -126,7 +126,7 @@ namespace SurveySays.Tests._4Outlines
 #line hidden
         }
         
-        public virtual void GetTheNextQuestionWhenHasPre_Requsites(string description, string expectedQuestion, string answerThatSastifiesThePrerequsite, string answerToTheSecondQuestion, string[] exampleTags)
+        public virtual void Outline_GetTheNextQuestionWhenHasPre_Requsites(string description, string expectedQuestion, string answerThatSastifiesThePrerequsite, string answerToTheSecondQuestion, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "NextQuestion"};
@@ -134,7 +134,7 @@ namespace SurveySays.Tests._4Outlines
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the next question when has pre-requsites", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Outline - Get the next question when has pre-requsites", @__tags);
 #line 32
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -155,31 +155,31 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Get the next question when has pre-requsites")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Outline - Get the next question when has pre-requsites")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get the next question in the survey")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("NextQuestion")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "when the prequsite is not met")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:description", "when the prequsite is not met")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected question", "fifth")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer that sastifies the prerequsite", "\"bird\"")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected question", "forth")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer that sastifies the prerequsite", "\"Bird\"")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer to the second question", "\"Mouse\"")]
-        public virtual void GetTheNextQuestionWhenHasPre_Requsites_WhenThePrequsiteIsNotMet()
+        public virtual void Outline_GetTheNextQuestionWhenHasPre_Requsites_WhenThePrequsiteIsNotMet()
         {
-            this.GetTheNextQuestionWhenHasPre_Requsites("when the prequsite is not met", "fifth", "\"bird\"", "\"Mouse\"", ((string[])(null)));
+            this.Outline_GetTheNextQuestionWhenHasPre_Requsites("when the prequsite is not met", "forth", "\"Bird\"", "\"Mouse\"", ((string[])(null)));
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Get the next question when has pre-requsites")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Outline - Get the next question when has pre-requsites")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get the next question in the survey")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("NextQuestion")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "when the prequsite is met")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:description", "when the prequsite is met")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected question", "forth")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer that sastifies the prerequsite", "\"bird\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer to the second question", "\"bird\"")]
-        public virtual void GetTheNextQuestionWhenHasPre_Requsites_WhenThePrequsiteIsMet()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected question", "third")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer that sastifies the prerequsite", "\"Bird\"")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:answer to the second question", "\"Bird\"")]
+        public virtual void Outline_GetTheNextQuestionWhenHasPre_Requsites_WhenThePrequsiteIsMet()
         {
-            this.GetTheNextQuestionWhenHasPre_Requsites("when the prequsite is met", "forth", "\"bird\"", "\"bird\"", ((string[])(null)));
+            this.Outline_GetTheNextQuestionWhenHasPre_Requsites("when the prequsite is met", "third", "\"Bird\"", "\"Bird\"", ((string[])(null)));
         }
     }
 }

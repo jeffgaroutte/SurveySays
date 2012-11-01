@@ -8,25 +8,17 @@ namespace SurveySays.Domain.Models
     internal class SingleChoiceQuestion : ChoiceQuestion
     {
 
-        private IList<Choice> choices { get; set; }
-        private string questionText { get; set; }
-        private Choice selectedChoice { get; set; }
+       private Choice selectedChoice { get; set; }
 
         internal SingleChoiceQuestion(string questionText)
             : base(questionText)
         {
-            this.questionText = questionText;
-            this.choices = new List<Choice>();
-        }
-
-        internal void AddChoice(Choice choice)
-        {
-            choices.Add(choice);
+            this.Choices = new List<Choice>();
         }
 
         internal void SelectChoice(Guid choiceId)
         {
-            var choice = choices.Single(x => x.Id == choiceId);
+            var choice = Choices.Single(x => x.Id == choiceId);
             selectedChoice = choice;
         }
 
@@ -40,7 +32,10 @@ namespace SurveySays.Domain.Models
             return this.selectedChoice != null && this.selectedChoice.Id == choiceId;
         }
 
-
+        internal override bool IsAnswered()
+        {
+            return this.selectedChoice != null;
+        }
 
     }
 }

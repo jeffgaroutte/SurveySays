@@ -29,7 +29,7 @@ namespace SurveySays.Domain.Models
             get { return memoText; }
         }
 
-        internal bool IsAnswered()
+        internal override bool IsAnswered()
         {
             return !string.IsNullOrWhiteSpace(this.AnswerText);
         }

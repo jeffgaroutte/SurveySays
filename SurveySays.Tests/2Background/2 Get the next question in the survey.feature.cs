@@ -93,12 +93,12 @@ namespace SurveySays.Tests._2Background
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Get the next question when it does not have pre-requsites")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Background - Get the next question when it does not have pre-requsites")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get the next question in the survey")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("NextQuestion")]
-        public virtual void GetTheNextQuestionWhenItDoesNotHavePre_Requsites()
+        public virtual void Background_GetTheNextQuestionWhenItDoesNotHavePre_Requsites()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the next question when it does not have pre-requsites", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Background - Get the next question when it does not have pre-requsites", new string[] {
                         "NextQuestion"});
 #line 15
 this.ScenarioSetup(scenarioInfo);
@@ -115,14 +115,14 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Get the next question when it does not have pre-requsites and I have answered a f" +
-            "ew questions")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Background - Get the next question when it does not have pre-requsites and I have" +
+            " answered a few questions")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get the next question in the survey")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("NextQuestion")]
-        public virtual void GetTheNextQuestionWhenItDoesNotHavePre_RequsitesAndIHaveAnsweredAFewQuestions()
+        public virtual void Background_GetTheNextQuestionWhenItDoesNotHavePre_RequsitesAndIHaveAnsweredAFewQuestions()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the next question when it does not have pre-requsites and I have answered a f" +
-                    "ew questions", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Background - Get the next question when it does not have pre-requsites and I have" +
+                    " answered a few questions", new string[] {
                         "NextQuestion"});
 #line 21
 this.ScenarioSetup(scenarioInfo);
@@ -131,7 +131,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 22
  testRunner.Given("I answered the first question with \"blue\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
- testRunner.And("I answered the  second question with \"Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I answered the second question with \"Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
  testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
@@ -141,12 +141,14 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Get the next question when it does have pre-requsites that I have not met")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Background - Get the next question when it does have pre-requsites that I have no" +
+            "t met")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get the next question in the survey")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("NextQuestion")]
-        public virtual void GetTheNextQuestionWhenItDoesHavePre_RequsitesThatIHaveNotMet()
+        public virtual void Background_GetTheNextQuestionWhenItDoesHavePre_RequsitesThatIHaveNotMet()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the next question when it does have pre-requsites that I have not met", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Background - Get the next question when it does have pre-requsites that I have no" +
+                    "t met", new string[] {
                         "NextQuestion"});
 #line 28
 this.ScenarioSetup(scenarioInfo);
@@ -158,7 +160,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("I answered the second question with \"Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
  testRunner.And("the third question has the prequsite that the second question was answered with \"" +
-                    "bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "Bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
  testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 33
@@ -168,12 +170,14 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Get the next question when it does have pre-requsites that I have met")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Background - Get the next question when it does have pre-requsites that I have me" +
+            "t")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get the next question in the survey")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("NextQuestion")]
-        public virtual void GetTheNextQuestionWhenItDoesHavePre_RequsitesThatIHaveMet()
+        public virtual void Background_GetTheNextQuestionWhenItDoesHavePre_RequsitesThatIHaveMet()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the next question when it does have pre-requsites that I have met", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Background - Get the next question when it does have pre-requsites that I have me" +
+                    "t", new string[] {
                         "NextQuestion"});
 #line 36
 this.ScenarioSetup(scenarioInfo);
@@ -182,10 +186,10 @@ this.ScenarioSetup(scenarioInfo);
 #line 37
  testRunner.Given("I answered the first question with \"gray\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 38
- testRunner.And("I answered the second question with \"bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I answered the second question with \"Bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
  testRunner.And("the third question has the prequsite that the second question was answered with \"" +
-                    "bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "Bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
  testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41

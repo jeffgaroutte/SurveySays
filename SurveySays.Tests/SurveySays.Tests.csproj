@@ -151,10 +151,6 @@
       <Project>{a4b53c4c-0786-4ca5-a480-1de53a9a1cbb}</Project>
       <Name>SurveySays.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SurveySays\SurveySays.csproj">
-      <Project>{33C31137-344E-4CA1-86A5-624033B30D63}</Project>
-      <Name>SurveySays</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

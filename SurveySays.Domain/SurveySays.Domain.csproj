@@ -40,9 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\Config.cs" />
+    <Compile Include="Api\QuestionSummary.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\ChoicePreRequsite.cs" />
-    <Compile Include="Models\IChoiceQuestion.cs" />
+    <Compile Include="Models\ChoiceQuestion.cs" />
     <Compile Include="Models\IPreRequsite.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\MemoQuestion.cs" />
