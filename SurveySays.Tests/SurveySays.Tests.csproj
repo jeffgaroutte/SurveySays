@@ -97,6 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configure a Survey.feature.cs">
+    <Compile Include="1Basics\NextQuestionSteps.cs" />
+    <Compile Include="2Background\2 Get the next question in the survey.feature.cs">
+      <DependentUpon>2 Get the next question in the survey.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Configure a Survey.feature</DependentUpon>
@@ -107,15 +110,22 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="1 Get the next question in the survey.feature.cs">
+    <Compile Include="2Background\Backgroundsteps.cs" />
+    <Compile Include="3Tables\3 Get the next question in the survey.feature.cs">
+      <DependentUpon>3 Get the next question in the survey.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>1 Get the next question in the survey.feature</DependentUpon>
     </Compile>
     <Compile Include="3 Get the next question in the survey.feature.cs">
       <DependentUpon>3 Get the next question in the survey.feature</DependentUpon>
+    <Compile Include="3Tables\TableSteps.cs" />
+    <Compile Include="4Outlines\4 Get the next question in the survey.feature.cs">
+      <DependentUpon>4 Get the next question in the survey.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="4Outlines\OutlineSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
