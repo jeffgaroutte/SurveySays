@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace SurveySays.Models
 {
-    internal interface IChoiceQuestion : IQuestion
+    internal abstract class IChoiceQuestion : IQuestion
     {
-        IList<Choice> Choices { get; set; }
-
-        bool IsChoiceSelected(Choice choice);
-
+        public abstract bool HasSelected(Guid choiceId);
     }
 }

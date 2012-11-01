@@ -7,7 +7,8 @@ namespace SurveySays.Models
 {
     internal class MemoPreRequsite : IPreRequsite
     {
-        public MemoAnswerQuestion Question { get; set; }
+        public MemoQuestion Question { get; set; }
+
         public bool IsSatisfied()
         {
             return this.Question.IsAnswered();

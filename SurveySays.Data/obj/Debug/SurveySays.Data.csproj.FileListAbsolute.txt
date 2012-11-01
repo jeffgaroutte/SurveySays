@@ -1,0 +1,5 @@
+C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Data\bin\Debug\SurveySays.Data.dll
+C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Data\bin\Debug\SurveySays.Data.pdb
+C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Data\obj\Debug\SurveySays.Data.csprojResolveAssemblyReference.cache
+C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Data\obj\Debug\SurveySays.Data.dll
+C:\Users\Ramirez\Documents\GitHub\SurveySays\SurveySays.Data\obj\Debug\SurveySays.Data.pdb

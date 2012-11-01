@@ -8,11 +8,13 @@ namespace SurveySays.Models
     internal class ChoicePreRequsite : IPreRequsite
     {
         public IChoiceQuestion Question { get; set; }
+
         public Choice RequiredChoice { get; set; }
 
         public bool IsSatisfied()
         {
-            return this.Question.IsChoiceSelected(this.RequiredChoice);
+            var choiceId = this.RequiredChoice.Id;
+            return this.Question.HasSelected(choiceId);
         }
     }
 }

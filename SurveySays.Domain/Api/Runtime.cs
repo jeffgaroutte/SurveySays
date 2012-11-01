@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurveySays.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,17 +9,15 @@ namespace SurveySays.Domain.Api
 {
     public class Runtime
     {
-
-        private Survey
+        private Survey _survey;
 
         public void RecordMemoQuestionAnswer(Guid questionId, string memoText)
         {
 
         }
 
-        public void RecordChoiceQuestionAnswer(Guid questionId, IEnumerable<Choice> choices)
+        public void RecordMultiChoiceAnswer(Guid questionId, IEnumerable<Guid> choiceIds)
         {
-
         }
 
         
