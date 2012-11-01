@@ -89,12 +89,11 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("the survey has the question \"what is your favorite animal\" with the answers \"Dog," +
                     " Cat, Fish, Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And("the survey has the question \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the survey has the open ended question \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then("the question should be \"what is your favorite animal\" with the answers \"Dog, Cat," +
-                    " Fish, Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the question should have the text \"what is your favorite animal\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -120,11 +119,11 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("I answered the question \"what is your favorite animal\" with the answers \"Dog, Cat" +
                     ", Fish, Mouse\" as \"Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
- testRunner.And("the survey has the question \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the survey has the open ended question \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
- testRunner.Then("the question should be \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the question should have the text \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -26,15 +26,22 @@ namespace SurveySays.Tests._1Basics
         {
             ScenarioContext.Current.Pending();
         }
-
-        [When(@"I get the the next question")]
-        public void WhenIGetTheTheNextQuestion()
+        
+        [Given(@"the survey has the open ended question ""(.*)""")]
+        public void GivenTheSurveyHasTheQuestion(string questionText)
         {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"the question should be ""(.*)"" with the answers ""(.*)""")]
-        public void ThenTheQuestionShouldBeWithTheAnswers(string questionText, string anwsers)
+
+        [When(@"I get the next question")]
+        public void WhenIGetTheNextQuestion()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the question should have the text ""(.*)""")]
+        public void ThenTheQuestionShouldHaveTheText(string questionText)
         {
             ScenarioContext.Current.Pending();
         }

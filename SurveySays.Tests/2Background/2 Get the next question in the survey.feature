@@ -21,7 +21,7 @@ Scenario: Get the next question when it does not have pre-requsites
 Scenario: Get the next question when it does not have pre-requsites and I have answered a few questions
 	Given I answered the first question with "blue"
 	And I answered the  second question with "Mouse"	
-	When I get the the next question
+	When I get the next question
 	Then the question should be the third question
 
 @NextQuestion
@@ -29,7 +29,7 @@ Scenario: Get the next question when it does have pre-requsites that I have not 
 	Given I answered the first question with "green"
 	And I answered the second question with "Mouse"	
 	And the third question has the prequsite that the second question was answered with "bird"
-	When I get the the next question
+	When I get the next question
 	Then the question should be the forth question
 
 @NextQuestion
@@ -37,5 +37,5 @@ Scenario: Get the next question when it does have pre-requsites that I have met
 	Given I answered the first question with "gray"
 	And I answered the second question with "bird"	
 	And the third question has the prequsite that the second question was answered with "bird"
-	When I get the the next question
+	When I get the next question
 	Then the question should be the third question

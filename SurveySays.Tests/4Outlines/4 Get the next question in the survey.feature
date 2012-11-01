@@ -20,7 +20,7 @@
 	| Mouse  |
 	| Bird   |
 	And the third question is "What... is the air-speed velocity of an unladen swallow"
-	And the forth question is "Well how'd you become king then?" with the answers 
+	And the forth question is "Well how'd you become king then" with the following answers 
 	| Answer                                     |
 	| The lady of the lake threw a sword at me   |
 	| I drew it from the stone                   |
@@ -33,7 +33,7 @@ Scenario Outline: Get the next question when has pre-requsites
 	Given I answered the first question with "green"
 	And I answered the second question with <answer to the second question>
 	And the third question has the prequsite that the second question was answered with <answer that sastifies the prerequsite>
-	When I get the the next question
+	When I get the next question
 	Then the question should be the <expected question> question
 
 	Examples: 

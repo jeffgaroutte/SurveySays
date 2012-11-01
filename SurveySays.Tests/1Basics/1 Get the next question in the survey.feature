@@ -8,15 +8,15 @@ Scenario: Get the next question when it does not have pre-requsites
 	Given I have started taking a survey
 	And I answered the question "what is your favorite color" with the answers "red, blue, green, gray" as "red"
 	And the survey has the question "what is your favorite animal" with the answers "Dog, Cat, Fish, Mouse"
-	And the survey has the question "what is your name"
-	When I get the the next question
-	Then the question should be "what is your favorite animal" with the answers "Dog, Cat, Fish, Mouse"
+	And the survey has the open ended question "what is your name"
+	When I get the next question
+	Then the question should have the text "what is your favorite animal"
 
 @NextQuestion
 Scenario: Get the next question when it does not have pre-requsites and I have answered a few questions
 	Given I have started taking a survey
 	And I answered the question "what is your favorite color" with the answers "red, blue, green, gray" as "red"
 	And I answered the question "what is your favorite animal" with the answers "Dog, Cat, Fish, Mouse" as "Mouse"
-	And the survey has the question "what is your name"
-	When I get the the next question
-	Then the question should be "what is your name"
+	And the survey has the open ended question "what is your name"
+	When I get the next question
+	Then the question should have the text "what is your name"

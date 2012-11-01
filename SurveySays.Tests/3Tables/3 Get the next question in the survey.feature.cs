@@ -119,7 +119,8 @@ namespace SurveySays.Tests._3Tables
             table3.AddRow(new string[] {
                         "I am not a king"});
 #line 23
- testRunner.And("the forth question is \"Well how\'d you become king then?\" with the answers", ((string)(null)), table3, "And ");
+ testRunner.And("the forth question is \"Well how\'d you become king then?\" with the following answe" +
+                    "rs", ((string)(null)), table3, "And ");
 #line 29
  testRunner.And("the fifth question is \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -166,7 +167,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 40
  testRunner.And("I answered the  second question with \"Mouse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 42
  testRunner.Then("the question should be the third question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -193,7 +194,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("the third question has the prequsite that the second question was answered with \"" +
                     "bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 50
  testRunner.Then("the question should be the forth question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -220,7 +221,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("the third question has the prequsite that the second question was answered with \"" +
                     "bird\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 57
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 58
  testRunner.Then("the question should be the third question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -250,7 +251,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 66
  testRunner.And("I answered the fifth question with \"Ford prefect\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 67
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 68
  testRunner.Then("there should not be another question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

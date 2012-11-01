@@ -119,7 +119,8 @@ namespace SurveySays.Tests._4Outlines
             table3.AddRow(new string[] {
                         "I am not a king"});
 #line 23
- testRunner.And("the forth question is \"Well how\'d you become king then?\" with the answers", ((string)(null)), table3, "And ");
+ testRunner.And("the forth question is \"Well how\'d you become king then\" with the following answer" +
+                    "s", ((string)(null)), table3, "And ");
 #line 29
  testRunner.And("the fifth question is \"what is your name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -146,7 +147,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And(string.Format("the third question has the prequsite that the second question was answered with {" +
                         "0}", answerThatSastifiesThePrerequsite), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 36
- testRunner.When("I get the the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the next question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 37
  testRunner.Then(string.Format("the question should be the {0} question", expectedQuestion), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
