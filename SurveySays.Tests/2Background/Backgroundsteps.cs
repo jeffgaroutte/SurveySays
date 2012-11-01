@@ -22,7 +22,7 @@ namespace SurveySays.Tests._2Background
             ScenarioContext.Current.Pending();
         }
 
-        [Given(@"the (.*) question has the prequsite that the second question was answered with ""(.*)""")]
+        [Given(@"the (.*) question has the prequsite that the (.*) question was answered with ""(.*)""")]
         public void GivenTheThirdQuestionHasThePrequsiteThatTheSecondQuestionWasAnsweredWith(string questionKeyThathasThePrerequsite, string questionKeyOfTheRelatedQuestion, string requiredAnswer)
         {
             ScenarioContext.Current.Pending();
