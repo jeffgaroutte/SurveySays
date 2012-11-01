@@ -103,7 +103,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="1 Get the next question in the survey.feature.cs">
+    <Compile Include="1Basics\1 Get the next question in the survey.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>1 Get the next question in the survey.feature</DependentUpon>
@@ -128,7 +128,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>2 Get the next question in the survey.feature.cs</LastGenOutput>
     </None>
-    <None Include="1 Get the next question in the survey.feature">
+    <None Include="1Basics\1 Get the next question in the survey.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>1 Get the next question in the survey.feature.cs</LastGenOutput>
     </None>

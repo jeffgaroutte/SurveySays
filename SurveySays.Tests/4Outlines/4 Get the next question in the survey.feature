@@ -1,8 +1,8 @@
 ﻿Feature: Get the next question in the survey
 	In order to answer all of required the questions in the survey
 	As the person taking the survey
-	I want to be given the next question in the survey based on the questions pre-requsites 
-
+	I want to be given the next question in the survey based on the questions pre-requsites
+	
 	Background: 
 	Given I have started taking a survey
 	And the first question is "what is your favorite color" with the following answers
@@ -29,40 +29,16 @@
 	And the fifth question is "what is your name"
 
 @NextQuestion
-Scenario: Get the next question when it does not have pre-requsites 
-	Given I answered the first question with "red"
-	When I get the next question
-	Then the question should be the second question
-
-@NextQuestion
-Scenario: Get the next question when it does not have pre-requsites and I have answered a few questions
-	Given I answered the first question with "blue"
-	And I answered the  second question with "Mouse"	
-	When I get the the next question
-	Then the question should be the third question
-
-@NextQuestion
-Scenario: Get the next question when it does have pre-requsites that I have not met
+Scenario Outline: Get the next question when has pre-requsites
 	Given I answered the first question with "green"
-	And I answered the second question with "Mouse"	
-	And the third question has the prequsite that the second question was answered with "bird"
+	And I answered the second question with <answer to the second question>
+	And the third question has the prequsite that the second question was answered with <answer that sastifies the prerequsite>
 	When I get the the next question
-	Then the question should be the forth question
+	Then the question should be the <expected question> question
 
-@NextQuestion
-Scenario: Get the next question when it does have pre-requsites that I have met
-	Given I answered the first question with "gray"
-	And I answered the second question with "bird"	
-	And the third question has the prequsite that the second question was answered with "bird"
-	When I get the the next question
-	Then the question should be the third question
+	Examples: 
+	| description                   | expected question | answer that sastifies the prerequsite | answer to the second question |
+	| when the prequsite is not met | fifth             | "bird"                                | "Mouse"                       |
+	| when the prequsite is met     | forth             | "bird"                                | "bird"                        |
 
-@NextQuestion
-Scenario: Get the next question when I have answered all the questions (in progess)
-	Given I answered the first question with "blue"
-	And I answered the second question with "Mouse"	
-	And I answered the third question with "42"	
-	And I answered the forth question with "I am not a king"	
-	And I answered the fifth question with "Ford prefect"	
-	When I get the the next question
-	Then there should not be another question
+
