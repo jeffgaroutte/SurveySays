@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SurveySays.Models
+namespace SurveySays.Domain.Models
 {
     public interface IChoiceQuestion : IQuestion
     {

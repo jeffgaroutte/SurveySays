@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SurveySays.Models
+namespace SurveySays.Domain.Models
 {
     internal class Choice
     {
@@ -12,6 +12,5 @@ namespace SurveySays.Models
         internal string DisplayText { get; set; }
         internal string Value { get; set; }
         internal bool ReadOnly { get; set; }
-
     }
 }

@@ -39,8 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\Configuration.cs" />
-    <Compile Include="Api\Context.cs" />
+    <Compile Include="Api\Config.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\ChoicePreRequsite.cs" />
     <Compile Include="Models\IChoiceQuestion.cs" />

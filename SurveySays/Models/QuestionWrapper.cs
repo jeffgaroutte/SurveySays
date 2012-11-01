@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SurveySays.Models
+namespace SurveySays.Domain.Models
 {
     public class QuestionWrapper
     {

@@ -1,54 +1,59 @@
-﻿using SurveySays.Models;
+﻿using SurveySays.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SurveySays.Api
+namespace SurveySays.Domain.Api
 {
     public class Survey
     {
-        private Guid currentQuestionId;
-        private IList<Question> orderedQuestions;
-        private IDictionary<Guid, SingleChoiceQuestion> singleChoiceQuestions;
-        private IDictionary<Guid, MultiChoiceQuestion> multiChoiceQuestions;
-        private IDictionary<Guid, MemoQuestion> memoQuestions;
+        internal Guid CurrentQuestionId;
+        internal IList<Question> OrderedQuestions;
+        internal IDictionary<Guid, SingleChoiceQuestion> SingleChoiceQuestions;
+        internal IDictionary<Guid, MultiChoiceQuestion> MultiChoiceQuestions;
+        internal IDictionary<Guid, MemoQuestion> MemoQuestions;
 
         public Survey()
         {
-            orderedQuestions = new List<Question>();
-            singleChoiceQuestions = new Dictionary<Guid, SingleChoiceQuestion>();
-            multiChoiceQuestions = new Dictionary<Guid, MultiChoiceQuestion>();
-            memoQuestions = new Dictionary<Guid, MemoQuestion>();
+            OrderedQuestions = new List<Question>();
+            SingleChoiceQuestions = new Dictionary<Guid, SingleChoiceQuestion>();
+            MultiChoiceQuestions = new Dictionary<Guid, MultiChoiceQuestion>();
+            MemoQuestions = new Dictionary<Guid, MemoQuestion>();
+        }
+
+        public dynamic GetNextQuestion()
+        {
+            return null;
         }
 
         internal void AddQuestion(SingleChoiceQuestion question)
         {
-            orderedQuestions.Add(question);
-            singleChoiceQuestions[question.Id] = question;
+            OrderedQuestions.Add(question);
+            SingleChoiceQuestions[question.Id] = question;
         }
 
         internal void AddQuestion(MultiChoiceQuestion question)
         {
-            orderedQuestions.Add(question);
-            multiChoiceQuestions[question.Id] = question;
+            OrderedQuestions.Add(question);
+            MultiChoiceQuestions[question.Id] = question;
         }
 
         internal void AddQuestion(MemoQuestion question)
         {
-            orderedQuestions.Add(question);
-            memoQuestions[question.Id] = question;
+            OrderedQuestions.Add(question);
+            MemoQuestions[question.Id] = question;
         }
 
         public void RecordSingleAnswer(Guid questionId, Guid choiceId)
         {
-            var question = singleChoiceQuestions[questionId];
+            var question = SingleChoiceQuestions[questionId];
             question.SelectChoice(choiceId);
         }
 
         public void RecordMultiAnswer(Guid questionId, List<Guid> choiceIds)
         {
-            var question = multiChoiceQuestions[questionId];
+            var question = MultiChoiceQuestions[questionId];
             foreach (var choiceId in choiceIds)
 	        {
                 question.SelectChoice(choiceId);
@@ -57,13 +62,13 @@ namespace SurveySays.Api
 
         public void RecordMemoAnswer(Guid questionId, string memoText)
         {
-            var question = memoQuestions[questionId];
+            var question = MemoQuestions[questionId];
             question.UpdateMemo(memoText);
         }
 
         public dynamic CompileResponse()
         {
-            var response = from question in orderedQuestions
+            var response = from question in OrderedQuestions
                            select new
                            {
                                QuestionText = question.AnswerText,

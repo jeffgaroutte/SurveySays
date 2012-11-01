@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SurveySays.Models
+namespace SurveySays.Domain.Models
 {
     internal abstract class IPreRequsite
     {
