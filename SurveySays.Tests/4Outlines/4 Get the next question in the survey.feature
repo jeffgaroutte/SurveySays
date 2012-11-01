@@ -2,7 +2,7 @@
 	In order to answer all of required the questions in the survey
 	As the person taking the survey
 	I want to be given the next question in the survey based on the questions pre-requsites
-	
+	 
 	Background: 
 	Given I have started taking a survey
 	And the first question is "what is your favorite color" with the following answers
