@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SurveySays.Models.Choice">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAI=</HashCode>
+      <FileName>Models\Choice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.ChoicePreRequsite" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAACAAAAA=</HashCode>
+      <FileName>Models\ChoicePreRequsite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.ChoiceQuestion">
+    <Position X="2" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IChoiceQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.MemoPreRequsite" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAACAAAAA=</HashCode>
+      <FileName>Models\MemoPreRequsite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.MemoQuestion">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgIAAAAAAAAAAAAAAIAAAAAABAAAAABAAAAAAgA=</HashCode>
+      <FileName>Models\MemoQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.MultiChoiceQuestion">
+    <Position X="0.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAEgAAAIAAAAAABAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\MultiChoiceQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.Question">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAgAABAAEAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurveySays.Models.SingleChoiceQuestion">
+    <Position X="3.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAFgAAAIAAAAAABAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\SingleChoiceQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

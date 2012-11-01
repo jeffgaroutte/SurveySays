@@ -5,20 +5,21 @@ using System.Web;
 
 namespace SurveySays.Models
 {
-    internal class SingleChoiceQuestion : IChoiceQuestion
+    internal class SingleChoiceQuestion : ChoiceQuestion
     {
 
         private IList<Choice> choices { get; set; }
         private string questionText { get; set; }
         private Choice selectedChoice { get; set; }
 
-        public SingleChoiceQuestion(string questionText)
+        internal SingleChoiceQuestion(string questionText)
+            : base(questionText)
         {
             this.questionText = questionText;
             this.choices = new List<Choice>();
         }
 
-        public void AddChoice(Choice choice)
+        internal void AddChoice(Choice choice)
         {
             choices.Add(choice);
         }
@@ -26,16 +27,17 @@ namespace SurveySays.Models
 
         internal void SelectChoice(Guid choiceId)
         {
-            choices.Single(x => x.Id == choiceId);
+            var choice = choices.Single(x => x.Id == choiceId);
+            selectedChoice = choice;
         }
 
 
-        public override string AnswerText
+        internal override string AnswerText
         {
             get { return selectedChoice.Value; }
         }
 
-        public override bool HasSelected(Guid choiceId)
+        internal override bool HasSelected(Guid choiceId)
         {
             return this.selectedChoice != null && this.selectedChoice.Id == choiceId;
         }

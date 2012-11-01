@@ -5,24 +5,31 @@ using System.Web;
 
 namespace SurveySays.Models
 {
-    internal class MultiChoiceQuestion : IChoiceQuestion
+    internal class MultiChoiceQuestion : ChoiceQuestion
     {
 
         private IList<Choice> choices;
         private IList<Choice> SelectedChoices;
-        private string questionText;
 
-        public MultiChoiceQuestion()
+        internal MultiChoiceQuestion(string questionText)
+            : base(questionText)
         {
             choices = new List<Choice>();
+            SelectedChoices = new List<Choice>();
         }
 
-        public void AddChoice(Choice choice)
+        internal void AddChoice(Choice choice)
         {
             choices.Add(choice);
         }
 
-        public override string AnswerText
+        internal void SelectChoice(Guid choiceId)
+        {
+            var choice = choices.Single(x => x.Id == choiceId);
+            SelectedChoices.Add(choice);
+        }
+
+        internal override string AnswerText
         {
             get
             {
@@ -32,7 +39,7 @@ namespace SurveySays.Models
             }
         }
 
-        public override bool HasSelected(Guid choiceId)
+        internal override bool HasSelected(Guid choiceId)
         {
             return this.SelectedChoices != null && this.SelectedChoices.Any(c => c.Id.Equals(choiceId));
         }

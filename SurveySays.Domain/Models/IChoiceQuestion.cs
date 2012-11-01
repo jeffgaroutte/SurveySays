@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SurveySays.Models
 {
-    internal abstract class IChoiceQuestion : IQuestion
+    internal abstract class ChoiceQuestion : Question
     {
-        public abstract bool HasSelected(Guid choiceId);
+        internal ChoiceQuestion(string questionText) : base(questionText) { }
+        internal abstract bool HasSelected(Guid choiceId);
     }
 }

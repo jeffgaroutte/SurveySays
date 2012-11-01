@@ -5,28 +5,30 @@ using System.Web;
 
 namespace SurveySays.Models
 {
-    internal abstract class IQuestion
+    internal abstract class Question
     {
         private Guid id;
+        private string questionText;
         private IList<IPreRequsite> preRequsites { get; set; }
 
-        public IQuestion()
+        internal Question(string questionText)
         {
             this.id = Guid.NewGuid();
+            this.questionText = questionText;
             this.preRequsites = new List<IPreRequsite>();
         }
 
-        public Guid Id
+        internal Guid Id
         {
             get { return id; }
         }
 
-        public void AddPreRequisite(IPreRequsite preRequisite)
+        internal void AddPreRequisite(IPreRequsite preRequisite)
         {
             preRequsites.Add(preRequisite);
         }
 
-        public abstract string AnswerText{get;}
+        internal abstract string AnswerText { get; }
 
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 namespace SurveySays.Models
 {
-    internal interface IPreRequsite
+    internal abstract class IPreRequsite
     {
-        bool IsSatisfied();
+        internal abstract bool IsSatisfied();
     }
 }

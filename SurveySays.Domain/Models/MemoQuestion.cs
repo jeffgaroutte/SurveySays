@@ -5,24 +5,31 @@ using System.Web;
 
 namespace SurveySays.Models
 {
-    internal class MemoQuestion : IQuestion
+    internal class MemoQuestion : Question
     {
 
         private Guid id;
         private string questionText;
-        private string answerText;
+        private string memoText;
 
-        public MemoQuestion()
+        internal MemoQuestion(string questionText)
+            : base(questionText)
         {
-            id = Guid.NewGuid();
+            this.id = Guid.NewGuid();
+            this.questionText = questionText;
         }
 
-        public override string AnswerText
+        internal void UpdateMemo(string memoText)
         {
-            get { return answerText; }
+            this.memoText = memoText;
         }
-        
-        public bool IsAnswered()
+
+        internal override string AnswerText
+        {
+            get { return memoText; }
+        }
+
+        internal bool IsAnswered()
         {
             return !string.IsNullOrWhiteSpace(this.AnswerText);
         }

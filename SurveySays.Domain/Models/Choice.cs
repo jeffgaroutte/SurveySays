@@ -7,11 +7,11 @@ namespace SurveySays.Models
 {
     internal class Choice
     {
-        public Guid Id { get; set; }
-        public bool Selected { get; set; }
-        public string DisplayText { get; set; }
-        public string Value { get; set; }
-        public bool ReadOnly { get; set; }
+        internal Guid Id { get; set; }
+        internal bool Selected { get; set; }
+        internal string DisplayText { get; set; }
+        internal string Value { get; set; }
+        internal bool ReadOnly { get; set; }
 
     }
 }
